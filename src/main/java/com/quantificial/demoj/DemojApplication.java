@@ -25,7 +25,7 @@ public class DemojApplication {
     @RestController
     class SimpleController {
 
-        @GetMapping("/abc")
+        @GetMapping("/")
         public Map hello() {
             Message a = new Message();
 
@@ -34,7 +34,7 @@ public class DemojApplication {
             Map map = new HashMap();
             map.put("say", "hello");
             map.put("data",true);
-            map.put("current", new Date());
+            map.put("current", new Date()); // should return 2018-12-15T13:04:50.491+0000 format in JSON
             map.put("checkDate", checkDate);
             
             map.put("class", a);

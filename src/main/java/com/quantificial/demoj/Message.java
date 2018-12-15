@@ -5,13 +5,13 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import org.assertj.core.api.DateAssert;
 
 public class Message {
 
     public String id;
 
-    @JsonFormat(pattern="yyyy-MM-dd")
+    // modify the JSON date format
+    @JsonFormat(pattern="yyyy-MM-dd") 
     public Date date = new Date();
 
 }
